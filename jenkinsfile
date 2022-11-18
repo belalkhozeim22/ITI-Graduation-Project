@@ -24,9 +24,9 @@ pipeline {
          stage ('deployment'){
             steps {
                 sh """
-                kubectl apply -f namespace.yml
-                kubectl apply -f deployment.yml
-                kubectl apply -f jenkins-service.yml
+                kubectl apply -f nodeapp/node.deploy.yml
+                kubectl apply -f nodeapp/node.svc.yml
+               # kubectl apply -f jenkins-service.yml
                 echo "CICD DONE"
             """
             }
