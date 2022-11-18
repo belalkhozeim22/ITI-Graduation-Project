@@ -5,7 +5,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                  git branch: 'main',
-                    url: 'https://github.com/Hassan-Ashraf-Elshennawy/ITI-Graduation-Project.git'
+                    url: "https://github.com/belalkhozeim22/ITI-Graduation-Project.git"
 
             }
         }
@@ -14,9 +14,9 @@ pipeline {
                   withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')])
                 {
                     sh "pwd"
-                    sh "docker build  . -t hassanashrafelshennawy/app-node"
+                    sh "docker build  . -t belalkhozeim22/app"
                     sh "docker login -u ${USERNAME} -p ${PASSWORD}"
-                    sh "docker push hassanashrafelshennawy/app-node"
+                    sh "docker push belalkhozeim22/app"
                     
                 }
             }    
