@@ -1,5 +1,5 @@
 resource "google_compute_firewall" "allow-ssh" {
-  project     = "hassan-ashraf"
+  project  = "deploy-application-368815"
   name        = "allow-ssh"
   network     =  google_compute_network.vpc-network-gcp.id
   direction     = "INGRESS"

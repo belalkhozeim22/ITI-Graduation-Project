@@ -1,5 +1,5 @@
 resource "google_container_cluster" "jenkins-gke-cluster" {
-  project  = "hassan-ashraf" 
+  project  = "deploy-application-368815"
   location = "us-central1-a" 
   name     = "jenkins-gke-cluster"
   remove_default_node_pool = true
