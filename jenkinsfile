@@ -11,7 +11,7 @@ pipeline {
         }
         stage('building') {
             steps {
-                  withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')])
+                  withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')])
                 {
                     sh "pwd"
                     sh "docker build  . -t belalkhozeim22/app"
